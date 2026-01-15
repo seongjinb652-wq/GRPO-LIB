@@ -1,3 +1,11 @@
+# ============================================
+# 📌 load_model.py
+# 목적: 학습/추론에 사용할 모델과 토크나이저 로드
+# - CONFIG["model_name"] 기반으로 AutoTokenizer, AutoModelForCausalLM 불러오기
+# - 정밀도(fp16, bf16, fp32) 설정
+# - 선택적으로 LoRA 적용 (CONFIG["use_lora"])
+# ============================================
+
 # 모델 로드
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import LoraConfig, get_peft_model
